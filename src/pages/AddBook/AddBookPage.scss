@@ -1,0 +1,44 @@
+.container {
+    max-width: 1200px;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-secondary {
+    background-color: #c4c4c4;
+    border-color: #c4c4c4;
+}
+
+.accordion-button {
+    background-color: #c4c4c4;
+    color: blue;
+    font-weight: bold;
+}
+.accordion-body {
+    background-color: var(--bg-gray-400);
+}
+
+.form-select {
+    margin-bottom: 10px;
+}
+
+
+.custom-green-select:focus {
+  border-color: #5cb85c;
+  box-shadow: 0 0 0 0.1rem rgba(92, 184, 92, 0.25);
+  outline: none;
+}
+
+.custom-green-select option {
+  color: #333;
+  background-color: #fff;
+}
+
+.green-slider {
+  accent-color: #5cb85c; /* Modern browsers (Chrome, Edge, Firefox) */
+}
+.green-slider::-moz-range-track {
+  background: #dff0d8;
+}

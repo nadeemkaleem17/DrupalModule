@@ -1,0 +1,38 @@
+.navbar {
+  padding: 0.75rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
+    margin-left: 2rem;
+    a {
+      margin-right: 1.5rem;
+      text-decoration: none;
+      color: #333;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding-right: 1rem;
+  }
+}

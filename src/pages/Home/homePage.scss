@@ -1,0 +1,35 @@
+@use '../../scss/_variables.scss' as *;
+
+.custom-bg-gray-100 {
+    background-color: var(--bg-gray-100);
+}
+.custom-bg-gray-200 {
+    background-color: var(--bg-gray-200);
+}
+.custom-bg-gray-300 {
+    background-color: var(--bg-gray-300);
+}
+.custom-bg-gray-400 {
+    background-color: var(--bg-gray-400);
+}
+.custom-bg-gray-500 {
+    background-color: var(--bg-gray-500);
+}
+.custom-bg-white {
+    background-color: var(--white);
+}
+.custom-text-white {
+    color: var(--white);
+}
+.custom-text-black {
+    color: var(--black);
+}
+.custom-text-blue {
+    color: var(--text-blue);
+}
+.book-title {
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+  }
+  

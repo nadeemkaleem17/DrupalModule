@@ -1,0 +1,264 @@
+http://localhost:1337/api/books
+
+{
+    "data": [
+        {
+            "id": 6,
+            "documentId": "lc3rhpmnr8iys8nmfzts5a6y",
+            "title": "Book 1",
+            "description": "This is Book 1",
+            "weight": 1,
+            "createdAt": "2025-03-27T04:00:41.367Z",
+            "updatedAt": "2025-03-27T04:00:41.367Z",
+            "publishedAt": "2025-03-27T04:00:41.375Z"
+        },
+        {
+            "id": 8,
+            "documentId": "gympw7u33kp4o4cth7y46yvi",
+            "title": "Book 2",
+            "description": "This is Book 2",
+            "weight": 2,
+            "createdAt": "2025-03-27T14:52:44.287Z",
+            "updatedAt": "2025-03-27T14:52:44.287Z",
+            "publishedAt": "2025-03-27T14:52:44.292Z"
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 2
+        }
+    }
+}
+
+
+
+GET http://localhost:1337/api/books/lc3rhpmnr8iys8nmfzts5a6y
+
+{
+    "data": {
+        "id": 6,
+        "documentId": "lc3rhpmnr8iys8nmfzts5a6y",
+        "title": "Book 1",
+        "description": "This is Book 1",
+        "weight": 1,
+        "createdAt": "2025-03-27T04:00:41.367Z",
+        "updatedAt": "2025-03-27T04:00:41.367Z",
+        "publishedAt": "2025-03-27T04:00:41.375Z"
+    },
+    "meta": {}
+}
+
+GET http://localhost:1337/api/pages?filters[book][id][$eq]=6&populate=children
+
+
+{
+    "data": [
+        {
+            "id": 12,
+            "documentId": "lfugtzdjoz47pjbri49vuogc",
+            "title": "Section 1.1",
+            "weight": 2,
+            "createdAt": "2025-03-27T04:02:06.977Z",
+            "updatedAt": "2025-03-27T04:02:06.977Z",
+            "publishedAt": "2025-03-27T04:02:06.985Z",
+            "description": "This is a sub-section of Chapter 1",
+            "children": [
+                {
+                    "id": 14,
+                    "documentId": "pifooz6t2cizi07992ufvkoc",
+                    "title": "Subsection 1.1.1",
+                    "weight": 3,
+                    "createdAt": "2025-03-27T04:11:48.934Z",
+                    "updatedAt": "2025-03-27T04:11:48.934Z",
+                    "publishedAt": "2025-03-27T04:11:48.942Z",
+                    "description": "This is a sub-section under Section 1.1"
+                },
+                {
+                    "id": 18,
+                    "documentId": "ql59tp34twt2oj2c9mnbwtw3",
+                    "title": "Subsection 1.1.1",
+                    "weight": 3,
+                    "createdAt": "2025-03-27T15:22:06.296Z",
+                    "updatedAt": "2025-03-27T15:22:06.296Z",
+                    "publishedAt": "2025-03-27T15:22:06.302Z",
+                    "description": "This is a sub-section under Section 1.1"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "documentId": "pifooz6t2cizi07992ufvkoc",
+            "title": "Subsection 1.1.1",
+            "weight": 3,
+            "createdAt": "2025-03-27T04:11:48.934Z",
+            "updatedAt": "2025-03-27T04:11:48.934Z",
+            "publishedAt": "2025-03-27T04:11:48.942Z",
+            "description": "This is a sub-section under Section 1.1",
+            "children": []
+        },
+        {
+            "id": 10,
+            "documentId": "pnb2oefmlomz2ydm39k5zm5g",
+            "title": "Chapter 1",
+            "weight": 1,
+            "createdAt": "2025-03-27T04:00:55.660Z",
+            "updatedAt": "2025-03-27T04:00:55.660Z",
+            "publishedAt": "2025-03-27T04:00:55.666Z",
+            "description": "Introduction to Chapter 1",
+            "children": [
+                {
+                    "id": 12,
+                    "documentId": "lfugtzdjoz47pjbri49vuogc",
+                    "title": "Section 1.1",
+                    "weight": 2,
+                    "createdAt": "2025-03-27T04:02:06.977Z",
+                    "updatedAt": "2025-03-27T04:02:06.977Z",
+                    "publishedAt": "2025-03-27T04:02:06.985Z",
+                    "description": "This is a sub-section of Chapter 1"
+                },
+                {
+                    "id": 16,
+                    "documentId": "xhotec64fhdx098rjmerxzyx",
+                    "title": "Section 1.2",
+                    "weight": 3,
+                    "createdAt": "2025-03-27T04:16:59.990Z",
+                    "updatedAt": "2025-03-27T04:16:59.990Z",
+                    "publishedAt": "2025-03-27T04:16:59.998Z",
+                    "description": "This is a sub-section 1.2 of Chapter 1"
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "documentId": "ql59tp34twt2oj2c9mnbwtw3",
+            "title": "Subsection 1.1.1",
+            "weight": 3,
+            "createdAt": "2025-03-27T15:22:06.296Z",
+            "updatedAt": "2025-03-27T15:22:06.296Z",
+            "publishedAt": "2025-03-27T15:22:06.302Z",
+            "description": "This is a sub-section under Section 1.1",
+            "children": []
+        },
+        {
+            "id": 16,
+            "documentId": "xhotec64fhdx098rjmerxzyx",
+            "title": "Section 1.2",
+            "weight": 3,
+            "createdAt": "2025-03-27T04:16:59.990Z",
+            "updatedAt": "2025-03-27T04:16:59.990Z",
+            "publishedAt": "2025-03-27T04:16:59.998Z",
+            "description": "This is a sub-section 1.2 of Chapter 1",
+            "children": []
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 5
+        }
+    }
+}
+
+POST http://localhost:1337/api/books/
+
+{
+  "data": {
+    "title": "Book 4",
+    "description": "This is Book 4",
+    "weight": 4
+  }
+}
+
+result: {
+    "data": {
+        "id": 12,
+        "documentId": "rdgesf6pxyo2v47xdac5a2l4",
+        "title": "Book 4",
+        "description": "This is Book 4",
+        "weight": 4,
+        "createdAt": "2025-03-27T15:25:55.685Z",
+        "updatedAt": "2025-03-27T15:25:55.685Z",
+        "publishedAt": "2025-03-27T15:25:55.689Z"
+    },
+    "meta": {}
+}
+
+
+GET http://localhost:1337/api/pages/wbmg4mycxzlce5o5bv8hhgq6?populate=children
+
+
+{
+    "data": {
+        "id": 20,
+        "documentId": "wbmg4mycxzlce5o5bv8hhgq6",
+        "title": "Chapter 1",
+        "weight": 1,
+        "createdAt": "2025-03-27T15:31:28.601Z",
+        "updatedAt": "2025-03-27T15:31:28.601Z",
+        "publishedAt": "2025-03-27T15:31:28.606Z",
+        "description": "Introduction to Chapter 1",
+        "children": []
+    },
+    "meta": {}
+}
+
+
+
+GET http://localhost:1337/api/pages?filters[parent][id][$eq]=20&populate=children
+
+{
+    "data": [
+        {
+            "id": 24,
+            "documentId": "kthbvhe42e4nhp06knn5v2xe",
+            "title": "Chapter 1 Section 1.2",
+            "weight": 3,
+            "createdAt": "2025-03-27T15:44:57.428Z",
+            "updatedAt": "2025-03-27T15:44:57.428Z",
+            "publishedAt": "2025-03-27T15:44:57.432Z",
+            "description": "This is a sub-section 1.2 of Chapter 1",
+            "children": []
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}
+
+
+GET http://localhost:1337/api/pages
+
+{
+    "data": {
+        "title": "Chapter 1 Section 1.2",
+        "weight": 3,
+        "description": "This is a sub-section 1.2 of Chapter 1",
+        "book": 8,
+        "parent":20
+    }
+}
+
+
+{
+    "data": {
+        "id": 24,
+        "documentId": "kthbvhe42e4nhp06knn5v2xe",
+        "title": "Chapter 1 Section 1.2",
+        "weight": 3,
+        "createdAt": "2025-03-27T15:44:57.428Z",
+        "updatedAt": "2025-03-27T15:44:57.428Z",
+        "publishedAt": "2025-03-27T15:44:57.432Z",
+        "description": "This is a sub-section 1.2 of Chapter 1"
+    },
+    "meta": {}
+}

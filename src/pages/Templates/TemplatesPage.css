@@ -1,0 +1,11 @@
+.template-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+  background-color: #fff;
+}
+
+.template-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #007bff; /* Optional highlight on hover */
+}
