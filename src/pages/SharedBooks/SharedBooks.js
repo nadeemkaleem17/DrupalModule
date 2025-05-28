@@ -1,18 +1,21 @@
 // React Libraries
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getBooks } from "../../data"; // You need to define this function
 import { BookCard } from "../../components/Elements/BookCard";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { SharedBookCard } from "../../components/Elements/SharedBookCard";
+import AuthContext from "../../context/AuthContext";
 
 export const SharedBooks = () => {
   const [books, setBooks] = useState([]);
-
+  const token = localStorage.getItem('token');
+  const {user} = useContext(AuthContext);
+  console.log("token", token, user.id);
   useEffect(() => {
     async function fetchPublicBooks() {
       try {
-        const data = await getBooks();
-        setBooks(data);
+          const data = await getBooks(token, user.id);
+          setBooks(data);
       } catch (error) {
         console.error("Error fetching public books:", error);
       }

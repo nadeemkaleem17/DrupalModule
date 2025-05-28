@@ -1,6 +1,7 @@
 import { fetchPageDocumentId, collectDescendantPageIds } from "../helpers/apiHelpers";
 
 const _addPage = async (page) => {
+  console.log("description: ", page.description);
   try {
     const response = await fetch("http://localhost:1337/api/pages", {
       method: "POST",

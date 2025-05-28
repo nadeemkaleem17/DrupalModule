@@ -12,10 +12,10 @@ export const AllRoutes = () => {
         <Route path = "/" element = {<HomePage/>}/>
         <Route path="books" element={<ProtectedRoute><BooksList /> </ProtectedRoute>} />
         <Route path="shared-books" element={<SharedBooks />} />
-        <Route path="add-page" element={<AddPage/>} />
+        {/* <Route path="add-page" element={<AddPage/>} /> */}
 
         <Route path="/books/edit/:id" element={<AddBookPage />} />
-        <Route path="books/:id" element={<BookDetail />} />
+        {/* <Route path="books/:id" element={<BookDetail />} /> */}
         <Route path = "/login" element = {<LoginPage/>}/>
         <Route path = "/register" element = {<SignupPage/>}/>
         <Route path = "/templates" element = {<TemplatesPage/>}/>

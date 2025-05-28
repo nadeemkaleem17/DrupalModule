@@ -53,7 +53,7 @@ export const SharedBookCard = ({ book }) => {
             <h5 className="mb-3">{title}</h5>
           </Link>
 
-          <Link to={`/books/${id}`} className="text-decoration-none">
+          <Link to={`/books/edit/${id}`} className="text-decoration-none">
             <p
               className={`card-text ${darkMode ? "text-light" : "text-muted"} small mb-3`}
               style={{

@@ -109,7 +109,6 @@ const processChapters = async ({ parsedChapters, existingChapters, existingSecti
       const newChapterId = updatedChapter.id;
       const parsedSections = parsed.sections;
 
-      // ✅ Use sections from old chapter ID to keep correct references
       const currentSections = getChildPages(oldChapterId);
 
       await processSections({
@@ -120,6 +119,7 @@ const processChapters = async ({ parsedChapters, existingChapters, existingSecti
       });
 
     } else {
+
       const newChapter = await addPage({
         title: parsed.title,
         description: parsed.description,
@@ -129,6 +129,7 @@ const processChapters = async ({ parsedChapters, existingChapters, existingSecti
       });
 
       for (const section of parsed.sections) {
+        console.log("section:", section);
         await addPage({
           title: section.title,
           description: section.description,

@@ -2,11 +2,21 @@ import { useParams } from 'react-router-dom';
 // import { useTheme } from '../../context/theme-context';
 import { PageEditor } from './components/PageEditor';
 import { ChapterSidebar } from './components/ChapterSidebar';
-import { AddBookProvider } from '../../context/EditBookContext';
+import { AddBookProvider, useAddBook } from '../../context/EditBookContext';
 import {RightSidebar} from "./components/RightSideBar";
+import { useEffect } from 'react';
 
 const AddBookPage = () => {
   const { id: bookId } = useParams();
+  const {editBookId, setEditBookId} = useAddBook();
+  useEffect(()=>{
+    function setBook(){
+      if(bookId){
+        setEditBookId(bookId);
+      }
+    }
+    setBook();
+  }, [bookId]);
   // const { darkMode } = useTheme();
   return (
     <AddBookProvider>
@@ -24,9 +34,11 @@ const AddBookPage = () => {
           padding: '2rem'
         }}
       >
-        <PageEditor bookId={bookId} />
+        {bookId &&
+        <PageEditor bookId={bookId} />}
+
       </div>
-                <div
+        <div
           className="bg-light"
           style={{
             borderLeft: '1px solid #ddd',

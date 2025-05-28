@@ -14,15 +14,6 @@ export const BooksList = () => {
   const {user} = useContext(AuthContext);
   const token = localStorage.getItem('token');
   useEffect(() => {
-    // async function fetchProducts() {
-    //   try {
-    //     const data = await getBooks(searchTerm);
-    //     setBooks(data);
-    //   } catch (error) {
-    //     // handle error
-    //   }
-    // }
-
     async function fetchPublic() {
       try {
         console.log(token, user.id);
@@ -34,8 +25,6 @@ export const BooksList = () => {
         // handle error
       }
     }
-
-    // fetchProducts();
     fetchPublic();
   }, [searchTerm]);
 

@@ -164,7 +164,6 @@ return (
   >
     <h5 style={{ marginBottom: '1rem', fontWeight: '600' }}>Settings</h5>
 
-    {/* Theme */}
     <div className="d-flex justify-content-between align-items-center mb-3">
       <label className="mb-0" style={{ fontSize: '1.1rem' }}>Theme</label>
       <select className="form-select form-select-sm"
@@ -184,7 +183,6 @@ return (
       </select>
     </div>
 
-    {/* Font Size */}
     <div className="d-flex justify-content-between align-items-center mb-3">
       <label className="mb-0" style={{ fontSize: '1.1rem' }}>Font size</label>
       <input  className="green-slider" type="range" min="12" max="24" defaultValue="16" style={{ width: '55%' }}
@@ -192,7 +190,6 @@ return (
         />
     </div>
 
-    {/* Line Height */}
     <div className="d-flex justify-content-between align-items-center">
       <label className="mb-0" style={{ fontSize: '1.1rem' }}>Line height</label>
       <input className="green-slider" type="range" min="1" max="3" step="0.1" defaultValue="1.5" style={{ width: '55%' }} 
